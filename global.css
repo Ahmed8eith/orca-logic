@@ -1,0 +1,541 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  background: linear-gradient(180deg, #131133 0%, #1D196A 100%);
+  background-repeat: no-repeat;
+  background-size: cover; /* or contain, depending on your design */
+  background-position: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+  
+
+@font-face {
+    font-family: 'Conthrax';
+    src: url('assets/fonts/conthrax-sb.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+/* frame 25,26 */
+.title{
+    margin-top: 76px;
+    margin-left: 203px;
+}
+
+.dashboard-container{
+    display: flex;
+    margin-top: 103px;
+}
+
+
+
+
+
+
+.imgs-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    margin-left: auto; 
+    margin-right: 0;
+  }
+
+
+  .dashboard-img {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .tech-img {
+    position: absolute;
+    top: -60px;
+    left: -20px;
+  }
+
+  
+
+.dashboard-container>h3{
+    font-family: 'Conthrax';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(241, 243, 243, 1);
+    margin-top: 515px;
+    margin-left: 208px;
+    margin-right: 152px;
+}
+
+.colors {
+    display: flex;
+    gap: 110px; 
+    margin-left: 208px;
+    margin-top: 105px;
+    border-radius: 10px;
+  }
+  
+  .gradient-color {
+    width: 169px;
+    height: 82px;
+    border-radius: 10px;
+    background: linear-gradient(
+      180deg,
+      rgba(118, 161, 178, 0.7) 0%,
+      rgba(78, 25, 82, 0.7) 100%
+    );
+  }
+  
+  .border-color {
+    display: inline-block;       
+    padding: 2px;                 
+    border-radius: 10px;
+    background: linear-gradient(
+      180deg,
+      rgba(20, 213, 142, 1) 0%,
+      rgba(233, 19, 194, 1) 100%
+    );
+  }
+  
+  .inner-box {
+    width: 169px;
+    height: 82px;
+    border-radius: 8px;  
+    background: rgba(29, 25, 106, 1);
+  }
+  
+  .tech-stack-container{
+    margin-top: 137px;
+    display: flex;
+    gap: 200px;
+    margin-left: 200px;
+  }
+
+  .frame-img{
+    width: 41%;
+  }
+
+  .tech-stack-container h1{
+    font-family: 'Conthrax';
+    font-weight: 600;
+    font-size: 36px;
+    color: rgba(241, 243, 243, 1);
+  }
+
+  .tech-stack-desc{
+    margin-right: 30px;
+    max-width: 617px;
+    font-family: 'Conthrax';
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(241, 243, 243, 1);
+  }
+
+  .tech-stack-desc>h3{
+    font-size: 18px
+  }
+
+  .tech-stack-desc > ul {
+    margin-top: 60px;
+    display: grid;
+    list-style: none; 
+    gap: 62px;
+    padding: 0;
+  }
+  
+  .tech-stack-desc li img {
+    vertical-align: middle;
+    margin-right: 13px;
+  }
+
+  @media screen and (max-width:1400px){
+    .dashboard-img,
+    .tech-img
+    {
+      width: 500px;
+    }
+  }
+
+  @media screen and (max-width:1000px){
+   .dashboard-container{
+    display: flex;
+    flex-direction: column-reverse;
+   }
+
+   .title{
+    margin: 20px  20px;
+  }
+   
+
+   .imgs-container {
+    max-width: 500px; 
+  }
+
+   .dashboard-container>h3{
+    margin-top: 60px;
+    margin-left: 50px;
+    width: 50%;
+   }
+
+
+   .tech-stack-container{
+    display: flex;
+    flex-direction: column-reverse;
+   }
+
+   .tech-stack-desc > ul{
+    gap: 10px;
+   }
+
+   .frame-img{
+    width: 80%;
+    margin-top: -150px;
+   }
+  }
+
+  @media screen and (max-width:650px){
+    .dashboard-img,
+    .tech-img{
+      width: 400px;
+    }
+
+    .dashboard-container {
+      flex-direction: column-reverse;
+      align-items: flex-start; 
+    }
+
+    @media screen and (max-width: 650px) {
+      .colors {
+        flex-direction: column;
+        width: 173px;
+        margin: 0 auto;
+        gap: 40px; 
+        margin-top: 50px;
+
+      }
+    }
+    
+
+    .tech-stack-container{
+      margin-left: 20px;
+      margin: 100px auto;
+      width: 90%;
+    }
+
+    .frame-img{
+      min-width: 300px;
+    }
+  
+  }
+
+  @media screen and (max-width:480px){
+    .dashboard-img,
+    .tech-img{
+      width: 250px;
+    }
+  }
+
+/* frame 27 */
+
+.box-container{
+  width: 63.5%;
+  margin: 209px auto;
+  background-color: rgba(241, 243, 243, 1);
+  border-radius: 50px;
+  padding-top: 60px;
+  padding-left: 117px;
+  padding-bottom: 89px;
+  padding-right: 176px;
+  box-shadow:  rgba(118, 161, 178, 1) 15px 15px;
+  font-family: 'Conthrax';
+  font-weight: 600;
+}
+
+.box-container>h1{
+  font-size: 36px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px;
+  align-items: start;
+}
+
+.box-container>h2{
+  font-size: 18px;
+}
+
+.box-container>ul{
+  display: grid;
+  list-style: none; 
+  grid-template-columns: repeat(3,1fr);
+  gap: 48px;
+  margin-top: 58px;
+}
+
+.box-title{
+  margin-right: 30px;
+}
+
+.box-container img {
+  vertical-align: middle;
+}
+
+.box-container>h2{
+  margin-top: 47px;
+}
+
+.box-container li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px; 
+  align-items: start;
+}
+
+
+.box-btn {
+  font-family: 'Conthrax';
+  font-weight: 600;
+  font-size: 16px;
+  color: rgba(22, 20, 55, 1);
+  margin-top: 58px;
+  padding: 37px;
+  width: 288px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(118, 161, 178, 1);
+  box-shadow: 7px 7px rgba(22, 20, 55, 1);
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.box-btn:active {
+  transform: translate(7px, 7px);
+  box-shadow: none;
+}
+
+
+@media screen and (max-width:900px){
+
+  .box-btn{
+    width: 100%;
+    margin: 30px auto;
+  }
+
+  .box-container{
+    padding: 40px 80px;
+  }
+
+  .box-container>ul{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+
+@media screen and (max-width:550px){
+
+  .box-container{
+    padding: 0;
+  }
+
+  .box-container>ul{
+    gap: 15px;
+  }
+
+  .box-title{
+    width: 35px;
+    margin-right: 10px;
+  }
+
+  .box-container>h1{
+    font-size: 20px;
+  }
+
+  .box-container>h2{
+    font-size: 15px;
+  }
+  
+
+  .box-btn{
+    
+    padding: 20px;
+  }
+
+  .box-container{
+    padding: 30px 50px;
+    margin-right: 10%;
+    margin-left: 7%;
+
+  }
+
+  .box-container>ul{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+/* frame 28 */
+
+.roi-calculator{
+  margin-top: 364px;
+  margin-bottom: 225px;
+  font-family: 'Conthrax';
+  color: rgba(241, 243, 243, 1);
+}
+
+.roi-title{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 30px;
+}
+
+.roi-title>h1{
+  margin-left: 60px;
+}
+
+.roi-calculator h1{
+  font-weight: 600;
+  font-size: 36px;
+  margin-left: 120px;
+}
+
+.gears-img{
+  position: relative;right: 10px;top: 30px;
+}
+
+.roi-calculator h2{
+font-weight: 600;
+font-size: 20px;
+}
+
+.roi-box{
+  border: 1px solid rgba(118, 161, 178, 1);
+  border-radius: 30px;
+  width:822px;
+  margin: 96px auto 225px;
+  padding: 38px;
+}
+
+.roi-box>h3{
+  font-size: 16px;
+  color: rgba(118, 161, 178, 1);
+}
+
+.roi-box img{
+  vertical-align: middle;
+}
+
+.slider-container{
+  margin-left: 15px;
+}
+
+.slider-container>h3{
+  font-weight: 600;
+  font-size: 16px;
+  color: rgba(118, 161, 178, 1);
+}
+
+.slider{
+  display: block;
+  -webkit-appearance: none;
+  width: 100%;
+  background: rgba(60, 59, 88, 1);
+  outline: none;
+  transition: opacity .2s;
+  height: 5px;
+  margin-bottom: 70px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 15px;
+  height: 15px;  
+  background-color: rgba(118, 161, 178, 1); 
+  cursor: pointer;
+  border-radius: 50%;  
+}
+
+
+.saving-container{
+  display: flex;
+  gap: 32px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.saving-text{
+  color: rgba(118, 161, 178, 1);
+}
+
+.saving-box h3{
+  font-size: 16px;
+  margin-left: 15px;
+}
+
+.saving-box{
+  border: 1px solid rgba(118, 161, 178, 1);
+  border-radius: 10px;
+  background-color: rgba(118, 161, 178, 0.1);
+  width: 244px;
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width:950px){
+  .roi-box{
+    width: 65%;
+  }
+}
+
+@media screen and (max-width:800px){
+  .roi-calculator h1{
+    font-size: 25px;
+  }
+
+  .roi-calculator h2{
+    font-size: 15px;
+  }
+
+  .saving-box>h3{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width:600px){
+  .roi-calculator h1{
+    font-size: 20px;
+  }
+
+  .roi-calculator h2{
+    font-size: 10px;
+  }
+
+  .saving-box>h3{
+    font-size: 8px;
+    margin-left: 5px;
+  }
+
+  .roi-title{
+    text-align: left;
+  }
+
+  .roi-title>h1{
+    margin-left: 0;
+
+  }
+
+  .gears-img{
+    width: 100px;
+  }
+}
