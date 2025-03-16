@@ -31,7 +31,7 @@ ul {
 
 /* frame 1,2 */
 
-header{
+.head{
   margin-top: 35px;
   margin-left: 203px;
   display: flex;
@@ -52,7 +52,7 @@ header{
   padding-top: 20px;
 }
 
-header button {
+.head button {
   position: relative;
   border: none;
   background: transparent;
@@ -64,7 +64,7 @@ header button {
   transition: color 0.3s ease-in-out;
 }
 
-header button::after {
+.head button::after {
   content: "";
   position: absolute;
   left: 0;
@@ -83,11 +83,11 @@ header button::after {
   transition: opacity 0.3s ease-in-out;
 }
 
-header button:hover {
+.head button:hover {
   color: rgba(62, 158, 196, 1);
 }
 
-header button:hover::after {
+.head button:hover::after {
   opacity: 1;
 }
 
@@ -98,6 +98,29 @@ header button:hover::after {
 
 .nav-middle{
   margin-right: 158px;
+}
+
+.sliding-menu {
+  position: fixed;
+  top: 0;
+  right: -500px; /* Hidden off-screen */
+  width: 300px;
+  height: 100%;
+  background: rgba(19, 17, 51, 0.95); /* A dark semi-transparent background */
+  transition: right 0.3s ease;
+  z-index: 1000; /* Ensure it's above other content */
+  padding: 20px;
+}
+
+.menu-btns{
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  padding-top: 50px;
+}
+
+.sliding-menu.active {
+  right: 0;
 }
 
 .hero-text{
@@ -151,6 +174,7 @@ header button:hover::after {
   vertical-align: middle;
   margin-left: 20px;
 }
+
 
 .dashboard-container{
     display: flex;
@@ -219,7 +243,7 @@ header button:hover::after {
   }
 
   @media screen and (max-width:1450px){
-    header{
+    .head{
       flex-direction: column;
     }
 
@@ -255,56 +279,62 @@ header button:hover::after {
     }
   }
 
-  @media screen and (max-width:1150px){
-   .dashboard-container{
-    display: flex;
-    flex-direction: column-reverse;
-   }
+  @media screen and (max-width: 1150px) {
+    .dashboard-container {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    
+    .head{
+      flex-direction: row;
+    }
 
+    .nav-btns {
+      display: none;
+    }
+    
+    .title{
+      padding: 30px;
+    }
 
-   header{
-    margin:20px auto
-   }
-
-   .title{
-    display: block;
-    margin: 20px auto
-   }
-
-   
-
-   .hero-text{
-    margin-top: 0;
-    margin-left: 40px;
-    max-width: 600px;
-   }
-
-   
-
-   .imgs-container {
-    max-width: 500px; 
-  }
-
-   .dashboard-container>h3{
-    margin-top: 60px;
-    margin-left: 50px;
-    width: 50%;
-   }
-
-
-   .tech-stack-container{
-    display: flex;
-    flex-direction: column-reverse;
-   }
-
-   .tech-stack-desc > ul{
-    gap: 10px;
-   }
-
-   .frame-img{
-    width: 80%;
-    margin-top: -150px;
-   }
+    .menu-btn {
+      display: block !important;
+      padding: 50px 50px 100px 50px;
+    }
+    
+    .head {
+      margin: 20px auto;
+    }
+    
+    .hero-text {
+      margin-top: 0;
+      margin-left: 40px;
+      max-width: 600px;
+    }
+    
+    .imgs-container {
+      max-width: 500px;
+    }
+    
+    .dashboard-container > h3 {
+      margin-top: 60px;
+      margin-left: 50px;
+      width: 50%;
+    }
+    
+    .tech-stack-container {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    
+    .tech-stack-desc > ul {
+      gap: 10px;
+    }
+    
+    .frame-img {
+      width: 80%;
+      margin-top: -150px;
+    }
   }
 
   @media screen and (max-width:800px){

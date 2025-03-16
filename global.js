@@ -24,3 +24,24 @@ const trialBtnToggle = () => {
   document.addEventListener('DOMContentLoaded', trialBtnToggle);
   
   
+  //burger menu
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.querySelector('.menu-btn');
+    const slidingMenu = document.querySelector('.sliding-menu');
+    
+    // Show the sliding menu when the menu button is clicked
+    menuBtn.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevents the click from bubbling up
+      slidingMenu.classList.add('active');
+    });
+    
+    // Hide the sliding menu when clicking anywhere outside of it
+    document.addEventListener('click', function(e) {
+      // If the click target is not inside the sliding menu or the menu button, hide the menu.
+      if (!slidingMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        slidingMenu.classList.remove('active');
+      }
+    });
+  });
+  
