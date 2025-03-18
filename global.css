@@ -11,6 +11,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover; /* or contain, depending on your design */
   background-position: center;
+  overflow-x: hidden;
 }
 
 ul {
@@ -45,12 +46,7 @@ ul {
 
 
 
-.hero-bg{
-  background: url('https://s3-alpha-sig.figma.com/img/fee6/cfb0/1b765f7e26828d9f43ff1bbb3bbb7a06?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Si-xhDAX1nx0kB3Yeez5UzZnRtOpM4n2eeJILdi1Txz8pMkn6iZBcXLvF1g8eIFaO2K4JvwKMFiViTD~Ef5~HBPrwcRzay580-WlciIdQjgjvFVoaoSzsBGYJ8pxitIV8nbeZaNo1dBL7JAcnJBuyDCEifdbt-lW4Colnbz0KvOw--u16JMHwzeGKF4PiUvLAA29rRirAArufgZevjJVRtJSeYvvlZw3mvNMKjYZ~j~XRgXqMcHdjnM0WtBdcfeAVAaZ4TQzFQpW204tqw4qfgMx~fM8WY6~lSVsTMMnAIrgXnSRtx0I1cws43N1KufYJLPbD-l~sydWzUnCrxId6w__') no-repeat center center fixed;
-  padding-bottom: 35px;
-  background-size: cover; /* Maintains aspect ratio */
-  padding-top: 20px;
-}
+
 
 .head button {
   position: relative;
@@ -999,17 +995,22 @@ font-weight: 600;
 .reviwes-container{
   width: 95%;
   margin: 0 auto;
+  overflow: hidden;
 }
+
 
 .reviews-wrapper-1st{
   margin-top: 168px;
   margin-left: 90px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  display: inline-flex; 
+  flex-wrap: nowrap; 
   gap: 15px;
+  will-change: transform;
 }
 
 .review{
+  width: 400px;
+  box-sizing: border-box; 
   position: relative;
   width: 360px;
   font-family: 'Conthrax';
@@ -1044,9 +1045,10 @@ font-weight: 600;
   }
 
   .reviews-wrapper-2nd{
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    display: inline-flex; 
+    flex-wrap: nowrap;
+    overflow: visible;
     margin-top: 78px;
-    display: grid;
     gap: 15px;
   }
 
@@ -1198,4 +1200,47 @@ font-weight: 600;
     
   }
   
+  
+  /* bg animation styles */
+
+
+  .hero-bg {
+    background-size: cover;
+    padding-top: 20px;
+    background-color: #010019;
+    position: relative; /* Add this to make absolute positioning work */
+    overflow: hidden; /* This prevents blobs from creating scrollbars */
+    height: 100%;
+    padding-bottom: 50px;
+  }
+  
+  /* Unchanged water-blob styles */
+  .water-blob {
+    position: absolute;
+    width: 20%;
+    height: 200px;
+    background: radial-gradient(circle, rgba(12, 16, 66, 0.8) 0%, rgba(7, 9, 41, 0.4) 70%, rgba(3, 4, 20, 0) 100%);
+    border-radius: 60% 40% 70% 30% / 40% 50% 50% 60%;
+    filter: blur(20px);
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: all 12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    z-index: 1; /* Ensure blobs appear behind content */
+  }
+  
+  /* Add z-index to content elements to place them above blobs */
+  .head, .dashboard-container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(1, 0, 25, 0.4) 0%, rgba(0, 0, 8, 0.8) 70%, rgba(0, 0, 4, 0.9) 100%); /* Updated overlay gradient */
+    pointer-events: none;
+  }
   
