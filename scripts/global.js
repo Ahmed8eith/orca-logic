@@ -65,7 +65,7 @@ const trialBtnToggle = () => {
     gsap.to(reviewsWrapper, {
         x: () => `-=${originalWidth}`,
         ease: "none",
-        duration: () => reviews.length * 2 ,
+        duration: () => reviews.length * 3 ,
         repeat: -1,
         modifiers: {
             x: gsap.utils.unitize(x => {
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.to(reviewsWrapper, {
     x: `+=${originalWidth}`, 
     ease: "none",
-    duration: () => reviews.length , 
+    duration: () => reviews.length*2 , 
     repeat: -1,
     modifiers: {
       x: gsap.utils.unitize(x => {
